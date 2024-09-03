@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<head>
+    <title>Cell-Land</title>
+    <link rel="stylesheet" type="text/css" href="misEstilos.css">
+    <script src="https://unpkg.com/axios@1.3.4/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body onload="obtenerTodos()">
+    <div class="titulo">
+        <h1>Cell-Land</h1>
+        <img src="logo.png" alt="Icono">
+    </div>
+    <hr class="linea"/>
+    <div>
+        <h2>Administración de productos</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Modelo</th>
+                    <th>Color</th>
+                    <th>Almacenamiento</th>
+                    <th>Procesador</th>
+                </tr>
+            </thead>    
+            <tbody id="tblContenido">
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <div>
+            <h4>Consultar artículo</h4>
+            <input type="numer" id="txtConsulta" placeholder="Ingrese su ID">
+            <button onclick="consultarUno()">Consultar</button><br/><br/>
+        </div>
+        <div>
+            <label for="consultaNombre">Nombre:</label>
+            <textarea id="consultaNombre" rows="1" cols="30"></textarea>
+        </div>
+        <div>
+            <label for="consultaModelo">Modelo:</label>
+            <textarea id="consultaModelo" rows="1" cols="30"></textarea>
+        </div>
+        <div>
+            <label for="consultaColor">Color:</label>
+            <textarea id="consultaColor" rows="1" cols="30"></textarea>
+        </div>
+        <div>
+            <label for="consultaAlmacenamiento">Almacenamiento:</label>
+            <textarea id="consultaAlmacenamiento" rows="1" cols="30"></textarea>
+        </div>
+        <div>
+            <label for="consultaProcesador">Procesador:</label>
+            <textarea id="consultaProcesador" rows="1" cols="30"></textarea>
+        </div><br/>
+        <button onclick="modificarUno()">Modificar</button>
+        <button onclick="eliminarUno()">Eliminar</button>
+    </div>
+    <div>
+        <div>
+            <h4>Agregar artículo</h4>
+            <input type="text" id="inputMarca" placeholder="Marca">
+            <input type="text" id="inputModelo" placeholder="Modelo">
+            <input type="text" id="inputColor" placeholder="Color">
+            <input type="text" id="inputAlmacenamiento" placeholder="Almacenamiento (GB)">
+            <input type="text" id="inputProcesador" placeholder="Procesador"><br/><br/>
+            <button onclick="agregarUno()">Agregar Nuevo</button>
+        </div>
+    </div>
+</body>
+</html>
